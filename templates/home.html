@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+
+{% block head %}
+	HomePage 
+{% endblock head %}
+
+{% block content %}
+<h1>Student Hub</h1>
+
+<div>
+	{% for task in all_task %}
+	<li>
+		{{ task }}
+	</li>
+	{% empty %}
+	<li>No task</li>
+	{% endfor %}
+</div>
+
+{% endblock content %}
+
+
