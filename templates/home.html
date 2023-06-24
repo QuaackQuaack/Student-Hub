@@ -5,7 +5,17 @@
 {% endblock head %}
 
 {% block content %}
-<h1>Student Hub</h1>
+
+<div class = "authen">
+	{% if user.is_authenticated %}
+		hi {{ user }}
+		<a href="{% url 'logout' %}">Log Out</a>
+	{% else %}
+		<a href = "{% url 'login' %}">Log In </a>|
+		<a href = "{% url 'signup' %}">Sign Up</a>
+	{% endif %}
+</div>
+
 
 <div>
 	{% for task in all_task %}
