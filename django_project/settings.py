@@ -37,8 +37,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites', #for 3rd party app
+    #Our apps
     'accounts.apps.AccountsConfig',
     'todolist.apps.TodolistConfig',
+
+    #3rd Party apps
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    #login provider
+    'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +127,12 @@ USE_TZ = True
 LOGIN_PAGE_REDIRECT = 'home'
 LOGOUT_PAGE_REDIRECT = 'home'
 
+AUTHENTICATION_BACKENDS = [
+        'django.contrib.auth.backends.ModelBackend',
+        'allauth.account.auth_backends.AuthenticationBackend', #3rd party authentication
+        ]
+
+SITE_ID = 3
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
