@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang = 'en'>
 	<head>
+<style>
+.authen {
+	text-align: right ;
+}
+			.home
+			a	{
+				color: red ;
+				text-align: left;
+			}
+</style>
+
 		<title>
 			{% block head %} Student Hub {% endblock head %}
 		</title>
 	</head>
 	<body>
+		<div class = "home">
+			<h2><a href ="{% url 'home' %}">STUDENT-HUB</a></h2>
+		</div>
+		<div class = "authen">
+			{% if user.is_authenticated %}
+				hi {{ user }}
+				<a href="{% url 'logout' %}">Log Out</a>
+			{% else %}
+				<a href = "{% url 'login' %}">Log In </a>|
+				<a href = "{% url 'signup' %}">Sign Up</a>
+			{% endif %}
+		</div>
+
 		{% block content %}
 		{% endblock content %}
 
