@@ -124,8 +124,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-LOGIN_PAGE_REDIRECT = 'home'
-LOGOUT_PAGE_REDIRECT = 'home'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 AUTHENTICATION_BACKENDS = [
         'django.contrib.auth.backends.ModelBackend',
