@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+
+{% block head %}Delete {% endblock head %}
+
+{% block content %}
+<h2>Deleting </h2>
+<form action = '' method = 'post'>{% csrf_token %}
+	<h3>Are you sure, you want to delete this task</h3>
+	<input type = 'submit' value = 'delete'>Delete</input>
+</form>
+{% endblock content %}
+
+

@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+
+{% block head %}Task {% endblock head %}
+
+{% block content %}
+<h2>{{ taskdetail.task }}</h2>
+
+<p> {{ taskdetail.body }} </p>
+<br>
+<a href="{% url 'update' taskdetail.pk %}">+Edit your blog</a><br>
+<a href ="{% url 'delete' taskdetail.pk %}">+Delete Your blog</a>
+{% endblock content %}
+

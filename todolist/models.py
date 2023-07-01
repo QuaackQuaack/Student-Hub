@@ -8,7 +8,7 @@ class Post(models.Model):
     body = models.TextField()
 
     def __str__(self):
-        return self.task
+        return f'{self.task}'
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('view', kwargs = {'pk': self.pk})

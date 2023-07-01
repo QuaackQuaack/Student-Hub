@@ -27,12 +27,17 @@
 <div>
 	{% for task in all_task %}
 	<li>
-		{{ task }}
+		<a href="{% url 'view' task.pk %}"> {{ task.task }}</a>
 	</li>
 	{% empty %}
 	<li>No task</li>
 	{% endfor %}
 </div>
+<br>
+<div> 
+	<a href="{% url 'create'%}">+Create a task</a>
+</div>
+
 
 {% endblock content %}
 
