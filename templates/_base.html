@@ -1,20 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang = 'en'>
 	<head>
-<style>
-.authen {
-	text-align: right ;
-}
-			.home
-			a	{
-				color: red ;
-				text-align: left;
-			}
-</style>
-
 		<title>
 			{% block head %} Student Hub {% endblock head %}
 		</title>
+		<link rel = 'stylesheet' href ='{% static 'css/base.css' %}'>
+		<script src = "{% static 'js/base.js' %}"></script>
 	</head>
 	<body>
 		<div class = "home">
