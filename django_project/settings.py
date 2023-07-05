@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     #Our apps
     'accounts.apps.AccountsConfig',
     'todolist.apps.TodolistConfig',
+    'notes.apps.NotesConfig',
 
     #3rd Party apps
     'allauth',
