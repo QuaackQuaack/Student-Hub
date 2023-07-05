@@ -10,28 +10,28 @@ from django.urls import reverse_lazy
 
 # Create your views here.
 
-class HomePageView(LoginRequiredMixin, ListView):
-    template_name = 'home.html'
+class HomePageView(ListView):
+    template_name = 'todolist/home.html'
     model = Post
     context_object_name = 'all_task'
 
 class NotesDetailView(LoginRequiredMixin, DetailView):
-    template_name = 'todolist.html'
+    template_name = 'todolist/todolist.html'
     model = Post
     context_object_name = 'taskdetail'
 
 class CreatePageView(LoginRequiredMixin, CreateView):
-    template_name = 'newtodolist.html'
+    template_name = 'todolist/newtodolist.html'
     fields = ['task', 'body']
     model = Post
 
 class DeletePageView(LoginRequiredMixin, DeleteView):
-    template_name = 'deletetodolist.html'
+    template_name = 'todolist/deletetodolist.html'
     model = Post
     success_url = reverse_lazy("home")
 
 class UpdatePageView(LoginRequiredMixin, UpdateView):
-    template_name = 'updatetodolist.html'
+    template_name = 'todolist/updatetodolist.html'
     model  = Post
     fields = ['task', 'body' ] 
     
