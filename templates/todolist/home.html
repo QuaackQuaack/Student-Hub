@@ -6,28 +6,10 @@
 
 {% block content %}
 
-<div class = "authen">
-	{% if user.is_authenticated %}
-		hi {{ user }}
-		<a href="{% url 'logout' %}">Log Out</a>
-	{% else %}
-		<a href = "{% url 'login' %}">Log In </a>|
-		<a href = "{% url 'signup' %}">Sign Up</a>
-	{% endif %}
-</div>
-<div class = "authen">
-	{% if user.is_authenticated %}
-	<a href = "{% url 'password_change' %}">Change my password</a>
-	{% else %}
-	<a href = "{% url 'password_reset' %}">Forgor your password?</a>
-
-	{% endif %}
-</div>
-
 <div>
 	{% for task in all_task %}
 	<li>
-		<a href="{% url 'view' task.pk %}"> {{ task.task }}</a>
+		<a href="{% url 'view' task.pk %}">{{ task.task }}</a>
 	</li>
 	{% empty %}
 	<li>No task</li>
