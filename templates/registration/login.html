@@ -1,18 +1,21 @@
 {% extends '_base.html' %}
 {% load socialaccount %}
+{% load crispy_forms_tags %}
 
 {% block head %} Log in {% endblock head %}
 
 {% block content %}
 <h2> Login </h2>
 <form action = '' method = "post">{% csrf_token %}
-	{{ form.as_p }}
+	{{ form|crispy }}
 	<br><button class = "btn btn-success ml-2" type='submit'>Login</button>
 </form>
 <br>
 <p><strong>--OR--</strong></p>
 <a  href  = "{% provider_login_url 'github' %}">Register through github</a>  |   
 <a href = "{% provider_login_url 'google' %}">Register through google</a>
+<br>
+<a href = "{% url 'password_reset' %}">Forgot your password?</a></p>
 
 {% endblock content %}
 

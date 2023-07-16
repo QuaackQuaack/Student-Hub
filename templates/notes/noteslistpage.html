@@ -6,8 +6,7 @@
 <h3>{{ notes_detail.title }}</h3>
 <p> {{ notes_detail.body }}</p>
 
-<div>
-	<a href = "{% url 'notesedit' notes_detail.pk %}">want to edit?</a><br>
-	<a href = "{% url 'notesdelete' notes_detail.pk %}">want to delete?</a>
+<div class = 'card-footer text-center text-muted'>
+	<a href = "{% url 'notesedit' notes_detail.pk %}">Edit</a> | <a href = "{% url 'notesdelete' notes_detail.pk %}">Delete</a>
 </div>
 {% endblock content %}

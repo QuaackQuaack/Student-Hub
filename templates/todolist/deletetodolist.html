@@ -1,12 +1,13 @@
 {% extends '_base.html' %}
+{% load crispy_forms_tags %}
 
 {% block head %}Delete {% endblock head %}
 
 {% block content %}
-<h2>Deleting </h2>
+<h2>Deleting </h2><br>
 <form action = '' method = 'post'>{% csrf_token %}
-	<h3>Are you sure, you want to delete this task</h3>
-	<input type = 'submit' value = 'delete'>Delete</input>
+	<h3>Are you sure, you want to delete this task?</h3>
+	<input class = 'btn btn-danger ml-2' type = 'submit' value = 'delete'>
 </form>
 {% endblock content %}
 
