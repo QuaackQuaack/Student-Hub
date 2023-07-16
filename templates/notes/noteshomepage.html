@@ -14,6 +14,12 @@
 	<li>No Notes</li><br>
 	{% endfor %}
 {% endif %}
+
+<form action = '{% url "search" %}' method = 'get'>
+	<input class = 'btn btn-success ml-2' input = 'q' type = 'text' placeholder = 'Search..'>
+</form>
+
+
 <div>
 	<a href="{% url 'notesnew' %}">+Create New Notes</a>
 </div>

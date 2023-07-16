@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+
+{% block head %} Search result {% endblock content %}
+
+{% block content %}
+<ul>
+	{% for note  in note_list %}
+	<li>
+		{{ note.name }}
+	</li>
+	{% endfor %}
+</ul>
+
+
