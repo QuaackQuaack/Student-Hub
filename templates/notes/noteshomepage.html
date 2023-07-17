@@ -5,6 +5,13 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+
+<div class = 'd-flex justify-content-end mb-3 '>
+	<form action = '{% url "search_results" %}' method = 'get'>
+		<input  name= 'q' type = 'text' placeholder = 'Search..'>
+	</form>
+</div>
+
 	{% for notes in all_notes %}
 	<li>
 		<a href ="{% url 'noteslist' notes.pk %}">{{ notes.title }}</a>
@@ -13,16 +20,12 @@
 	{% empty %}
 	<li>No Notes</li><br>
 	{% endfor %}
-{% endif %}
-
-<form action = '{% url "search" %}' method = 'get'>
-	<input class = 'btn btn-success ml-2' input = 'q' type = 'text' placeholder = 'Search..'>
-</form>
-
 
 <div>
 	<a href="{% url 'notesnew' %}">+Create New Notes</a>
 </div>
+
+{% endif %}
 
 {% endblock content %}
 

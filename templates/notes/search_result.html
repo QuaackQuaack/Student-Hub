@@ -1,14 +1,17 @@
 {% extends '_base.html' %}
 
-{% block head %} Search result {% endblock content %}
+{% block head %} Search result {% endblock head %}
 
 {% block content %}
+<h1>Search result</h1>
 <ul>
-	{% for note  in note_list %}
+	{% for note in note_list %}
 	<li>
-		{{ note.name }}
+		<a href = "{% url 'noteslist' note.pk %}">{{ note.title }}</a>
 	</li>
 	{% endfor %}
 </ul>
+{% endblock content %}
+
 
 
