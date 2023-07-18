@@ -9,4 +9,5 @@
 <div class = 'card-footer text-center text-muted'>
 	<a href = "{% url 'notesedit' notes_detail.pk %}">Edit</a> | <a href = "{% url 'notesdelete' notes_detail.pk %}">Delete</a>
 </div>
+<p><a href = "{% url 'noteshome' %}">-->Go back to Notes-list</a></p>
 {% endblock content %}
