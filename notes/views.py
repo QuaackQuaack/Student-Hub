@@ -6,7 +6,8 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 from django.urls import reverse_lazy
 from .models import Notes
-
+from .forms import NotesForm
+ 
 # Create your views here.
 class NotesHomePageView(ListView):
     model = Notes
@@ -30,8 +31,9 @@ class NotesDeleteView(DeleteView):
 
 class NotesNewView(CreateView):
     model = Notes
+    form_class = NotesForm
     template_name = 'notes/notesnewpage.html'
-    fields = ['title', 'body']
+    #fields = ['title', 'body']
 
 class SearchPageView(ListView):
     model = Notes

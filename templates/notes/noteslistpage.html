@@ -1,10 +1,11 @@
 {% extends '_base.html' %}
+{% load markdown_deux_tags %}
 
 {% block title %}Notes Page {% endblock title %}
 
 {% block content %}
 <h3>{{ notes_detail.title }}</h3>
-<p> {{ notes_detail.body }}</p>
+<p> {{ notes_detail.body|markdown }}</p>
 
 <div class = 'card-footer text-center text-muted'>
 	<a href = "{% url 'notesedit' notes_detail.pk %}">Edit</a> | <a href = "{% url 'notesdelete' notes_detail.pk %}">Delete</a>

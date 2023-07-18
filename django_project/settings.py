@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'notes.apps.NotesConfig',
 
     #3rd Party apps
+    'pagedown.apps.PagedownConfig',
+    'markdown_deux',
     "crispy_forms",
     "crispy_bootstrap5",
     'allauth',
@@ -98,7 +100,8 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        "default": env.dj_db_url("DATABASE_URL")
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

@@ -5,7 +5,7 @@ from .models import Notes
 # Register your models here.
 
 class NotesAdmin(admin.ModelAdmin):
-    list_display  = ("title",)
+    list_display  = ("title","body",)
 
 
 admin.site.register(Notes, NotesAdmin)

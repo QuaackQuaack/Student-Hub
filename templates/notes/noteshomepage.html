@@ -1,4 +1,5 @@
 {% extends '_base.html' %}
+{% load markdown_deux_tags %}
 
 {% block title %}Notes Homepage {% endblock title %}
 
@@ -15,7 +16,7 @@
 	{% for notes in all_notes %}
 	<li>
 		<a href ="{% url 'noteslist' notes.pk %}">{{ notes.title }}</a>
-		<p>{{ notes.body }}</p>
+		<p>{{ notes.body|markdown }}</p>
 	</li>
 	{% empty %}
 	<li>No Notes</li><br>

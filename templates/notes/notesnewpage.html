@@ -1,8 +1,13 @@
 {% extends '_base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 
 {% block title %}Notes Create{% endblock title %}
+
+{% block head_extra %}
+{{ form.media }}
+{% endblock head_extra %}
 
 {% block content %}
 <form action = '' method = 'post'>{% csrf_token %}
