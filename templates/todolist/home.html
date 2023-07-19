@@ -9,7 +9,8 @@
 <div>
 	{% for task in all_task %}
 	<li>
-		<a href="{% url 'view' task.pk %}">{{ task.task }}</a>
+		<a href="{% url 'view' task.pk %}">{{ task.task }}<br></a>
+		<br>
 	</li>
 	{% empty %}
 	<li>No task</li>

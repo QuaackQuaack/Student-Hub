@@ -53,6 +53,14 @@ and go to **localhost:8000** or **127.0.0.1** for project to run
 - Learning to use different package of django like paperdown, allauth, whitenoise
 - Learn proper deployement list for django (hosting part remaining)
 
+## Reamining 
+
+- [ ] To write test.py for both To-do and Note
+- [ ] Prompt to ask user, that pomodoro will restart if they change the page.
+
+**P.S** I am not that much confident in frontend, So pomodoro may not work fully for now and most of its code is taken as reference from other work. I will now learn abit more about frontend (CSS, JS) and make pomodoro abit more functionable. 
+
+
 ~~ MEOW
 
 
