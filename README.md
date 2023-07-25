@@ -29,6 +29,8 @@ python -m venv .venv
 python -m pip install -r requirement.txt
 
 ```
+**Note**
+you need to make .env file and populate ***SECRET KEY***.For that, you can create your own secret key by command `python -c "import secrets; print(secrets.token_urlsafe())"` and enter the value in .env file.If you feel uncomfortable for that then just, uncomment Security key in line 29 of settings.py file(Although it is not good practice)
 
 Run **migration** and **collectstatic**
 
