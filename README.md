@@ -55,7 +55,7 @@ and go to **localhost:8000** or **127.0.0.1** for project to run
 - Learning to use different package of django like paperdown, allauth, whitenoise
 - Learn proper deployement list for django (hosting part remaining)
 
-## Reamining 
+## Remaining 
 
 - [ ] To write test.py for both To-do and Note
 - [ ] Prompt to ask user, that pomodoro will restart if they change the page.
